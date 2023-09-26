@@ -79,7 +79,8 @@ Generating public/private rsa key pair. The gen part is generate. -t allows you 
 - Enter the file name in which to save the key( example: github_1)
 
 - Enter passphrase: press enter without having a passphrase. 
-![img.png](img.png) Result
+![img.png](img.png) ![img](https://github.com/Boluti/Tech254_python/assets/145682024/2ad1e294-a82e-4cff-b675-1cf7eaf1eac3)
+ Result
 -  Then do a $ls to list the files present. 
 
 - To generate the private key, use $ cat github_test1.pub
@@ -87,12 +88,14 @@ Generating public/private rsa key pair. The gen part is generate. -t allows you 
 - Copy the key to github under the new SSH key under your settings.
 
 The result is shown below: 
-- ![img_1.png](img_1.png)
+- ![img_1.png](img_1.png) ![img_1](https://github.com/Boluti/Tech254_python/assets/145682024/d0855db8-de3d-4edf-8f49-fe59419dbc2c)
+
 - 
 - Open Pycharm and continue: use $ cd python, 
 then $ git status then $ eval `ssh-agent`(it provides information on the ssh key to use)
 
-- ![img_2.png](img_2.png)
+- ![img_2.png](img_2.png) ![img_2](https://github.com/Boluti/Tech254_python/assets/145682024/5a1ac01e-c8ea-4961-9384-d3ea7b9f62dc)
+
 - Agent pid 1200. pid stands for process ID
 
 - On GitBash try: $ ssh-add ~/.ssh/github_test1
@@ -128,7 +131,8 @@ When you run this command, it updates the URL of the remote repository named "or
 To continue:
 - $ git commit -m "Small change for testing"
 - $ git status 
-![img_3.png](img_3.png)
+![img_3.png](img_3.png) ![img_3](https://github.com/Boluti/Tech254_python/assets/145682024/51e99c18-ba86-40f9-8f02-dcdbe301b6d5)
+
 - $ git push -u origin main
 
 - To find the origin of git or github, use
