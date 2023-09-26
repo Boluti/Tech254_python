@@ -57,19 +57,9 @@ Here are some reasons why SSH is used and how it increases security:
 You can now use the generated SSH key pair for authentication when connecting to remote systems or services that support SSH-based authentication.
 
 ##### SSH keys are useful for automation. #####
-SSH uses keys( public)
-
-public key is our lock and private key is the key that opens the lock (SSH) 
+###### Note: SSH uses keys( public). Public key is our lock and private key is the key that opens the lock (SSH) 
  
-- $pwd: opens in your own directory
-- $ cd: takes you to your own directory. 
-- $ ls: shows all the files and folders
-- $ls -a : shows all the hidden folders
-- $ssh: storage place for ssh keys. ssh key needs to be hidden because of security. 
-- $ mkdir .ssh: it makes a new directory called ssh.  After creating the folder, use $ls -a to view hidden folders. 
-To remove a directory after creating one, use: 
-- $ rm -rf. ssh : used to force delete something
-- $cd . ssh is used to go into a (.ssh) folder in a directory
+
 
 #### Steps in generating public and private keys
  - $ ssh-keygen -t rsa -b 4096 -C "BSoyode@spartaglobal.com"
@@ -79,7 +69,8 @@ Generating public/private rsa key pair. The gen part is generate. -t allows you 
 - Enter the file name in which to save the key( example: github_1)
 
 - Enter passphrase: press enter without having a passphrase. 
-![img.png](img.png) Result
+![img.png](img.png) ![img](https://github.com/Boluti/Tech254_python/assets/145682024/7055968a-a250-4c6a-a3fd-b5e60108eeee)
+ Result
 -  Then do a $ls to list the files present. 
 
 - To generate the private key, use $ cat github_test1.pub
@@ -87,12 +78,14 @@ Generating public/private rsa key pair. The gen part is generate. -t allows you 
 - Copy the key to github under the new SSH key under your settings.
 
 The result is shown below: 
-- ![img_1.png](img_1.png)
+- ![img_1.png](img_1.png) ![img_1](https://github.com/Boluti/Tech254_python/assets/145682024/de3d522f-db1e-438f-b4b9-cf4b494dda9a)
+
 - 
 - Open Pycharm and continue: use $ cd python, 
 then $ git status then $ eval `ssh-agent`(it provides information on the ssh key to use)
 
-- ![img_2.png](img_2.png)
+- ![img_2.png](img_2.png) ![img_2](https://github.com/Boluti/Tech254_python/assets/145682024/0d9eb3fc-cfa1-457e-b0aa-75aa35cebe5e)
+
 - Agent pid 1200. pid stands for process ID
 
 - On GitBash try: $ ssh-add ~/.ssh/github_test1
@@ -115,9 +108,9 @@ What does it mean by Github does not provide shell access?
 - Go to github, then code under repository, then SSH. On gitbash type:
 - $ git remote set-url origin git@github.com:Boluti/Tech254_python.git
 
-next is $ git status, then $ git add. which adds to staging. 
+- Next is $ git status, then $ git add. which adds to staging. 
 
-Description:
+#### Description:
 The command `git remote set-url origin git@github.com:Boluti/Tech254_python.git` is used to update the URL of the remote repository named "origin" in your local Git repository. Here's what each part of the command means:
 
 - `git remote set-url origin`: This is the command to update the URL of the remote repository named "origin".
@@ -125,13 +118,25 @@ The command `git remote set-url origin git@github.com:Boluti/Tech254_python.git`
 
 When you run this command, it updates the URL of the remote repository named "origin" in your local Git repository to the specified SSH URL. This allows you to push and pull changes to and from the GitHub repository using the SSH protocol.
 
-To continue:
+#### To continue:
 - $ git commit -m "Small change for testing"
 - $ git status 
-![img_3.png](img_3.png)
+![img_3.png](img_3.png) ![img_3](https://github.com/Boluti/Tech254_python/assets/145682024/b406b07a-5445-451d-bb28-1a37ad6d218f)
+
 - $ git push -u origin main
 
 - To find the origin of git or github, use
 $ git remote -v
+
+#### Things to remember: 
+- $pwd: opens in your own directory
+- $ cd: takes you to your own directory. 
+- $ ls: shows all the files and folders
+- $ls -a : shows all the hidden folders
+- $ssh: storage place for ssh keys. ssh key needs to be hidden because of security. 
+- $ mkdir .ssh: it makes a new directory called ssh.  After creating the folder, use $ls -a to view hidden folders. 
+To remove a directory after creating one, use: 
+- $ rm -rf. ssh : used to force delete something
+- $cd . ssh is used to go into a (.ssh) folder in a directory
 
 
